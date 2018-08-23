@@ -1,0 +1,8 @@
+10 B Bear 
+11 C Cat
+13 D Dog
+16 F Fox 
+1 A Aardvark 
+25 G Goose 
+14 E Elephant 
+35 H Horse
