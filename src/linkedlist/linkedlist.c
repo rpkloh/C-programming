@@ -115,7 +115,6 @@ llist * insertNodeInOrder(llist * oldlist, int id, char initial, char * lastname
 		if(DEBUG) printf("Other nodes1\n");
 		//case 1:id is greater that current node id in list, keep going through the list
 		//case 2:new id is less than or equal to current node id in list, insert before the current list node and exit
-		if(DEBUG) printf("Other nodes2\n");
 		while(currentnode != NULL){	//check to see if we've reached the end of the list
 			if(newnode->id > currentnode->id){
 				if(DEBUG) printf("Inch along\n");
@@ -124,7 +123,7 @@ llist * insertNodeInOrder(llist * oldlist, int id, char initial, char * lastname
 			}else{
 				if(DEBUG) printf("Insert lesser\n");
 				if((DEBUG_NODE)&&(oldnode != NULL)) printf("oldnode %d\n", oldnode->id);
-				if((DEBUG_NODE)&&(oldnode != NULL)) printf("currentnode %d\n", currentnode->id);
+				if((DEBUG_NODE)&&(currentnode != NULL)) printf("currentnode %d\n", currentnode->id);
 				//if we are at the start, we need some special action
 				if(oldnode->id == currentnode->id){
 					if(DEBUG) printf("Insert start\n");
@@ -147,7 +146,7 @@ llist * insertNodeInOrder(llist * oldlist, int id, char initial, char * lastname
 			currentnode = oldnode->next;
 		
 		}
-		if(DEBUG) printf("Other nodes3\n");
+		if(DEBUG) printf("Other nodes2\n");
 		oldnode->next = newnode;	//insert at the end of list
 		newlist->size = size + 1;
 		if(DEBUG_LIST) printList(newlist->front);
@@ -228,8 +227,6 @@ int main(){
 	node * tempn1; 
 	node * tempn2; 
 	llist * newlist;
-	// the pointer to the linked list, initialized to NULL values
-	//llist * nodeq = {NULL, NULL, 0};
 	
 	/* Test of node and list building
 	tempn1 = createNode(1, 'y', "yak");
