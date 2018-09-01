@@ -125,7 +125,7 @@ llist * insertNodeInOrder(llist * oldlist, int id, char initial, char * lastname
 				if((DEBUG_NODE)&&(oldnode != NULL)) printf("oldnode %d\n", oldnode->id);
 				if((DEBUG_NODE)&&(currentnode != NULL)) printf("currentnode %d\n", currentnode->id);
 				//if we are at the start, we need some special action
-				if(oldnode->id == currentnode->id){
+				if(oldnode == currentnode){
 					if(DEBUG) printf("Insert start\n");
 					newlist->front = newnode;
 					newnode->next = oldnode;
